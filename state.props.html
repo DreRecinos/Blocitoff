@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+/*In your own words, explain the essential differences between props and state in
+React.
+
+There are essential differences between props and state in react. Props are
+immutable within the component, they are created and passed into a component.
+State is mutable and can be changed, but it belongs only to a single component.
+Props can be used in a parent component and be passed to its children components,
+state cannot. A component's state mutates by user events, props do not change
+within the component and are simply used in a component.*/
+<html lang="en">
+  <head>
+    <title>My First React app</title>
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+       class Greeting extends React.Component {
+         render() {
+           return (
+             <p>This is a paragraph</p>
+           );
+         }
+       }
+
+       ReactDOM.render(
+         <Greeting />, <App />, document.getElementById('app')
+
+
+         function Learn(props) {
+           return <h2>i have learned {props.language}</h2>;
+         }
+
+
+         function App() {
+           return (
+             <div>
+               <Learn language="JavaScript"/>
+               <Learn language="HTML"/>
+               <Learn language="CSS"/>
+           );
+         }
+
+
+
+
+    class Counter extends React.Component {
+             constructor(props){
+               super(props);
+               this.state = {
+                 number: 18
+               }
+             }
+
+            render() {
+              return (
+                <div>
+                   <h3>Checkpoints completed : {this.state.number}</h3>
+                </div>
+              );
+            }
+          }
+
+
+       );
+    </script>
+  </body>
+</html>
